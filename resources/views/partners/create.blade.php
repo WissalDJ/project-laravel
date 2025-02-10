@@ -5,7 +5,16 @@
 @section('content')
 <div class="container">
     <h1>Create Partner</h1>
-    <form action="" method="POST" enctype="multipart/form-data">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form action="{{ route('partners.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -40,7 +49,7 @@
             <input type="file" name="imagmenu" class="form-control" id="imagmenu" required>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
-        <a href="{{ route('products.index') }}">rollback</a>
+        <a href="{{ route('partners.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 @endsection

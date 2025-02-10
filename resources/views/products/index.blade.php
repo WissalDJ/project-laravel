@@ -43,6 +43,7 @@
                         <img src="{{ asset('images/glacier.jpeg') }}" class="card-img-top" alt="{{ $product->name }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $product->name }}</h5>
+                            <p>{{$product->category}}</p>
                             <p class="card-text">
                                 <span class="like-icon">❤️</span>
                                 <span class="like-count">{{ $product->likes }}</span>
@@ -52,6 +53,27 @@
                 </div>
             </div>
         @endforeach
+    </div>
+</div>
+{{-- //formulaire --}}
+<div class="container-button">
+    <div class="opportunity">
+        <img src="{{ asset('images/tangoexpress.jpg') }}" alt="Devenir coursier">
+        <h2>Devenir coursier</h2>
+        <p>C'est vous le chef ! Livrez avec Glovo pour gagner des revenus compétitifs en toute flexibilité et liberté.</p>
+        <button>Inscription</button>
+    </div>
+    <div class="opportunity">
+        <img src="{{ asset('images/tangoexpress.jpg') }}" alt="Devenir partenaire">
+        <h2>Devenir partenaire</h2>
+        <p>Grandissez avec Glovo ! Boostez les ventes et accédez à de nouvelles opportunités grâce à notre technologie et à notre base d'utilisateurs !</p>
+        <button><a href="{{ route('partners.create') }}">Inscription</a></button>
+    </div>
+    <div class="opportunity">
+        <img src="{{ asset('images/tangoexpress.jpg') }}" alt="Emploi">
+        <h2>Emploi</h2>
+        <p>Vous cherchez un nouveau défi ? Si vous faites preuve d'ambition et d'humilité et aimez travailler en équipe, contactez-nous !</p>
+        <button>Inscription</button>
     </div>
 </div>
 <a href="{{ route('partners.create') }}">partenir</a><!-- Section de services de livraison avec style inspiré -->
