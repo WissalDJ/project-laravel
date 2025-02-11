@@ -61,7 +61,7 @@
         <img src="{{ asset('images/tangoexpress.jpg') }}" alt="Devenir coursier">
         <h2>Devenir coursier</h2>
         <p>C'est vous le chef ! Livrez avec Glovo pour gagner des revenus compétitifs en toute flexibilité et liberté.</p>
-        <button>Inscription</button>
+        <button><a href="{{ route('couriers.create') }}">Inscription</a></button>
     </div>
     <div class="opportunity">
         <img src="{{ asset('images/tangoexpress.jpg') }}" alt="Devenir partenaire">

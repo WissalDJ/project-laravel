@@ -20,5 +20,10 @@ class Product extends Model
 {
     return $this->belongsTo(Partner::class, 'partner_id');
 }
+public function orders()
+{
+    return $this->hasMany(Order::class);
+}
+
 
 }

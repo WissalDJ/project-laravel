@@ -32,3 +32,9 @@ Route::resource('partners', PartnerController::class);
 // Route::get('/deliveries/create', [DeliveryController::class, 'create'])->name('deliveries.create');
 // Route::post('/deliveries', [DeliveryController::class, 'store'])->name('deliveries.store');
 
+use App\Http\Controllers\CourierController;
+use App\Http\Controllers\OrderController;
+
+Route::resource('couriers', CourierController::class);
+Route::resource('orders', OrderController::class);
+

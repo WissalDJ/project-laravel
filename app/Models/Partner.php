@@ -18,4 +18,9 @@ class Partner extends Model
         'adrees',
         'imagmenu',
     ];
+    public function orders()
+{
+    return $this->hasMany(Order::class);
+}
+
 }
