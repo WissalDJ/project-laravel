@@ -3,7 +3,13 @@
 @section('title', 'Create Partner')
 
 @section('content')
-<div class="container">
+<div class="cont">
+<div class="image-container">
+    <img src="{{ asset('images/partenaire.jpeg') }}" class="imageform side-image" alt="food">
+    <img src="{{ asset('images/second-image.jpg') }}" class="imageform main-image " alt="food">
+    <img src="{{ asset('images/third-image.jpg') }}" class="imageform side-image" alt="food">
+</div>
+<div class="container2">
     <h1>Create Partner</h1>
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -52,4 +58,7 @@
         <a href="{{ route('partners.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
+
+
+<div>
 @endsection
